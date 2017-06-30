@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>携程</title>
+  <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body {
+      max-width: 640px;
+      min-width: 320px;
+      margin: 0 auto;
+    }
+    header a img{
+      width: 100%;      /*可以根据父盒子的宽度进行缩放*/
+      display: block;   /*去掉图片底部的间距*/
+    }
+    
+    .nav-items {
+      height: 90px;
+      display: flex;    /*设置当前盒子为弹性盒子*/
+      background-color: deeppink;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    .nav-items-title {
+      flex: 1;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      
+    }
+    .nav-items-title a {
+      text-decoration: none;
+      color: #fff;
+    }
+    .nav-items-content {
+      flex: 2;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .nav-items-content a {
+      width: 50%;
+      box-sizing:border-box; /*设置当前盒子为内减*/
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      line-height: 45px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+    }
+    .nav-items:nth-child(4) .nav-items-content a {
+      width: 33.33%;   /*这个地方得使用百分比的形式，项目当中，弹性盒与百分比有时候经常一块使用*/
+    }
+    
+    /*产品的样式*/
+    .xc-product {
+      display: flex;
+    }
+    .xc-product a {
+      flex: 1;
+    }
+    .xc-product a img {
+      width: 100%;
+      display: block;
+    }
+    /*底部信息*/
+    footer ul {
+      height: 40px;
+      display: flex;
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666;
+      list-style: none;
+      
+    }
+    footer ul li {
+      flex: 1;
+      text-align: center;
+    }
+    footer ul li a{
+      display: block;
+      line-height: 40px;
+      text-decoration: none;
+      color: #666;
+    }
+    footer p {
+      text-align: center;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <a href="#"><img src="images/banner.jpg" alt=""></a>
+</header>
+<nav>
+  <div class="nav-items">
+    <div class="nav-items-title">
+      <a href="#">酒店</a>
+    </div>
+    <div class="nav-items-content">
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+    </div>
+  </div>
+  <div class="nav-items">
+    <div class="nav-items-title">
+      <a href="#">酒店</a>
+    </div>
+    <div class="nav-items-content">
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+    </div>
+  </div>
+  <div class="nav-items">
+    <div class="nav-items-title">
+      <a href="#">酒店</a>
+    </div>
+    <div class="nav-items-content">
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+    </div>
+  </div>
+  <div class="nav-items">
+    <div class="nav-items-content">
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+      <a href="#">海外酒店</a>
+    </div>
+  </div>
+</nav>
+
+<div class="xc-product">
+  <a href="#"><img src="images/extra_1.png" alt=""></a>
+  <a href="#"><img src="images/extra_2.png" alt=""></a>
+</div>
+<footer>
+  <ul>
+    <li><a href="#">电话预定</a></li>
+    <li><a href="#">下载客户端</a></li>
+    <li><a href="#">我的</a></li>
+  </ul>
+  <p>网站地图｜<a href="#">Global sites</a> ｜ <a href="#">电脑版</a></p>
+   <p> ©2017携程旅行｜沪ICP备08023580号</p>
+</footer>
+</body>
+</html>
